@@ -56,20 +56,23 @@ hr {
 	width: 50%;
 }
 
-input{
+.submit-wrapper{
+	margin-top: 25.8px;
+}
+
+.input-text {
 	text-align: center;
+	padding:10px 16px;
+	border: solid 1px #B1B1B1;
+	border-radius: 5px;
+	
 }
 
 #submit-button {
 	background-color: white;
-	
-    border: 2px solid transparent;
+	border:0;
+	position: relative;
     border-radius: 5px;
-    -moz-border-image: -moz-linear-gradient(right, #1ACFFF 0%, #0B62FE 100%);
-    -webkit-border-image: -webkit-linear-gradient(right, #1ACFFF 0%, #0B62FE 100%);
-    border-image: linear-gradient(to left, #0B62FE 0%, #1ACFFF 100%);
-    border-image-slice: 1;
-    
     color: black;
     padding: 10px 16px;
     text-align: center;
@@ -77,18 +80,60 @@ input{
     display: inline-block;
     font-size: 16px;
     margin: 4px 2px;
-    -webkit-transition-duration: 0.7s; /* Safari */
-    transition-duration: 0.7s;
+    -webkit-transition-duration: 0.5s; /* Safari */
+    transition-duration: 0.5s;
     cursor: pointer;
 }
 
-#submit-button:hover{
-	border:none;
-	color: white;
+#submit-button::after {
 	background:linear-gradient(to right, #1ACFFF, #0B62FE);
+	border-radius: 5px;
+	position: absolute;
+    top: -2px; bottom: -2px;
+    left: -2px; right: -2px;
+    content: '';
+	z-index: -1;
 }
 
-@media (max-width: 360px){
+#submit-button:hover{
+	color: white;
+	background:transparent;
+}
+
+.list{
+	text-align: left;
+	list-style: none;
+	margin: 24px auto 0;
+	padding:0;
+	width:150px;
+	font-size: 20px;
+}
+
+.list li {
+	padding:4px;
+	white-space: nowrap;
+}
+.checkmark{
+	display: inline-block;
+	vertical-align: -2px;
+}
+.check-icon {
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	background-image:url("../images/list-unchecked.png");
+	background-size: contain;
+}
+
+.is-completed:checked + .check-icon{
+	background-image: url("../images/list-checked.png");
+}
+
+.is-completed{
+	display: none;
+}
+
+@media (max-width: 414px){
 	.top-navigation .fa {
 		font-size: 1.8em;
 		top: 0.9em;
@@ -105,6 +150,12 @@ input{
 	.logo {
 		height: 42px;
 		vertical-align: -11px;
+	}
+	.input-text, #submit-button {
+		display: block;
+		margin:0 auto;
+		width:50%;
+		margin-bottom: 10px;
 	}
 	
 }

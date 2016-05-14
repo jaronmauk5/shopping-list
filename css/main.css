@@ -133,6 +133,11 @@ hr {
 	display: none;
 }
 
+.fa-trash-o 	{
+	color:red;
+	margin-left: 5px;
+}
+
 @media (max-width: 414px){
 	.top-navigation .fa {
 		font-size: 1.8em;

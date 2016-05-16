@@ -123,10 +123,15 @@ hr {
 	height: 20px;
 	background-image:url("../images/list-unchecked.png");
 	background-size: contain;
+	vertical-align: -2px;
 }
 
 .is-completed:checked + .check-icon{
 	background-image: url("../images/list-checked.png");
+}
+
+.is-completed:checked + .check-icon + .item-name {
+	text-decoration: line-through;
 }
 
 .is-completed{
@@ -136,6 +141,7 @@ hr {
 .fa-trash-o 	{
 	color:red;
 	margin-left: 5px;
+	cursor: pointer;
 }
 
 @media (max-width: 414px){

@@ -169,6 +169,10 @@ hr {
 	cursor: pointer;
 }
 
+.item-list {
+  display: none;
+}
+
 @media (max-width: 414px){
 	.top-navigation .fa {
 		font-size: 1.8em;

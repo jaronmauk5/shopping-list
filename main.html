@@ -17,26 +17,40 @@
 	 	<h1><img class="logo" src="images/list-logo-white.png" alt="checkmark"> Mr.List</h1>
 	 	<i class="fa fa-plus-square-o" aria-hidden="true"></i>
 	 </div>
+
+	  <div class="list-menu">
+	 	<ul>
+	 		<li><a href="#">Shopping List</a></li>
+	 		<li><a href="#">Grocery List</a></li>
+	 		
+	 	</ul>
+	 </div>
 	</nav>
+
+
+	<section class="lists">
+		<div class="item-list">
+			<form class="form-group">
+						<!-- Input box and submit button -->
+				<h2>Shopping List</h2>
+				<hr>
+				<div class="submit-wrapper">
+				<input type="text" name="list-input" 
+				class="input-text" placeholder="Add something!">
+				<button id= "submit-button">Add item to list</button>
+				</div>
+			</form>
 	
-	<form class="form-group">
-		<!-- Input box and submit button -->
-		<h2>Shopping List</h2>
-		<hr>
-		<div class="submit-wrapper">
-			<input type="text" name="list-input" 
-			class="input-text" placeholder="Add something!">
-			<button id= "submit-button">Add item to list</button>
-		</div>
-	</form>
-	
-	<ul class= "list">
+			<ul class= "list">
 		<!-- check box and list items -->
 		
-	</ul>
+			</ul>
+		</div>
+	</section>
 
 	<script src="http://code.jquery.com/jquery.min.js"></script>
 	<script src="js/list.js"></script>
+	
 
 </body>
 </html>	

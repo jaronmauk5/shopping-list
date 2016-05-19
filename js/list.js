@@ -46,8 +46,7 @@ $(document).ready(function(){
 			var config = $.extend({}, defaults, options);
 
 			var $el = $(this);
-			$el.html(config.template.replace('{title}',/
-				config.title));
+			$el.html(config.template.replace('{title}',config.title));
 
 			$el.find('.form-group').submit(function(event){
 				event.preventDefault();

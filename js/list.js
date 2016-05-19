@@ -4,7 +4,6 @@ $(document).ready(function(){
 			$('.list-menu').animate({left:'-100%'});
 		}
 		else {	
-
 			$('.list-menu').animate({left:0});
 		}
 	});
@@ -25,7 +24,7 @@ $(document).ready(function(){
 	});
 
 
-	$.fn.todoList = function(){
+	$.fn.todoList = function(options){
 		return this.each(function(){
 
 			var defaults = {
@@ -40,14 +39,15 @@ $(document).ready(function(){
 							</form>\
 							<ul class="list">\
 							<!-- check box and list items -->\
-									</ul>'
+							</ul>'
 
 			};
 
-			var config = $.extend({},default, options);
+			var config = $.extend({}, defaults, options);
 
 			var $el = $(this);
-			$el.html(config.template.replace('{title}', config.title));
+			$el.html(config.template.replace('{title}',/
+				config.title));
 
 			$el.find('.form-group').submit(function(event){
 				event.preventDefault();
@@ -63,7 +63,7 @@ $(document).ready(function(){
 			});
 
 			$el.find('.list').on('click', '.fa-trash-o', function(event){
-					$(event.currentTarget).parents("li").remove();
+				$(event.currentTarget).parents("li").remove();
 			});
 		});	
 
@@ -73,7 +73,7 @@ $(document).ready(function(){
 		var listId = $('.lists').children().length;
 		var $el = $('<div>', { class: 'item-list', 'data-list': listId});
 		$el.todoList({
-			title:name
+			title: name
 		});
 		var $menuItem = $('<li>').append(
 			$('<a href="#")' + name + '</a>').attr('data-list', listId)

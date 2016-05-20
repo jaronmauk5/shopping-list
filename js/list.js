@@ -16,6 +16,7 @@ $(document).ready(function(){
 			}
 	});
 		
+		//switching between list items in side bar
 	$('.list-menu').on('click', 'a', function () {
 			var listId = $(this).attr('data-list');
 			$('.lists').find('[data-list]').hide();
@@ -85,8 +86,7 @@ $(document).ready(function(){
 	}
 
 	//initialize
-	//addList('Shopping List').show();
+		//addList('Shopping List').show();
 
-	window.addList = addList;
 
 }); //doc.ready

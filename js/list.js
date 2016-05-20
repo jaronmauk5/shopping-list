@@ -21,6 +21,8 @@ $(document).ready(function(){
 			$('.lists').find('[data-list]').hide();
 			var $list = $('.lists').find('[data-list=' + listId + ']');
 			$list.show();
+			$('.list-menu').animate({left:'-100%'});
+
 	});
 
 
@@ -70,12 +72,12 @@ $(document).ready(function(){
 
 	function addList(name) {
 		var listId = $('.lists').children().length;
-		var $el = $('<div>', { class: 'item-list', 'data-list': listId});
+		var $el = $('<div>', { class: 'item-list', 'data-list': listId });
 		$el.todoList({
 			title: name
 		});
 		var $menuItem = $('<li>').append(
-			$('<a href="#")' + name + '</a>').attr('data-list', listId)
+			$('<a href="#">' + name + '</a>').attr('data-list', listId)
 		);
 		$('.list-menu ul').append($menuItem);
 		$('.lists').append($el);
@@ -83,7 +85,7 @@ $(document).ready(function(){
 	}
 
 	//initialize
-	addList('Shopping List');
+	//addList('Shopping List').show();
 
 	window.addList = addList;
 

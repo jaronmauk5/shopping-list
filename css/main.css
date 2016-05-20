@@ -4,8 +4,6 @@ body{
 
 
 .top-navigation {
-	background-color: #15A9FE;
-	background: linear-gradient(to right, #1ACFFF, #0B62FE);
 	position: fixed;
 	width: 100%;
 	top: 0;
@@ -18,8 +16,15 @@ h1{
 	font-size: 2.25em;
 	font-weight: 300;
 	color: white;
-	margin-right: 18px;
+	padding: 0.67em 10px 0.67em 0px;
+	margin: 0;
 }	
+.top-navigation .content {
+	background-color: #15A9FE;
+	background: linear-gradient(to right, #1ACFFF, #0B62FE);
+	position: relative;
+	z-index:12;
+}
 
 .top-navigation .fa-bars {
 	color: white;
@@ -45,12 +50,19 @@ h1{
 	height: 50px;
 }
 
+.item-list {
+	display: none;
+}
+
 .list-menu {
 	position: absolute;
-	top: 100%;
+	top: 0;
 	left: -100%;
-	width: 100%;
+	width: 30%;
+	height: 100vh;
+	padding-top: 98.219px;
 	background-color:gray; 
+	z-index: 10;
 }
 
 .list-menu ul {
@@ -63,8 +75,18 @@ h1{
 	display: block;
 	text-align: center;
 	padding: 1em;
-	font-size: 2em;
-	font-color:white;
+	font-size: 18px;
+	font-weight: 300;
+	text-decoration: none;
+	color:white;
+}
+
+.list-menu h3 {
+	text-align: center;
+	color:white;
+	font-weight: 400;
+	font-size: 24px;
+	text-decoration: underline;
 }
 
 
@@ -193,6 +215,9 @@ hr {
 		margin:0 auto;
 		width:50%;
 		margin-bottom: 10px;
+	}
+	.list-menu {
+		width:60%
 	}
 	
 }

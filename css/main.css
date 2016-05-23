@@ -63,6 +63,8 @@ h1{
 	padding-top: 98.219px;
 	background-color:#B2B2B2; 
 	z-index: 10;
+	box-shadow: 5px 0px 10px #6A6A6A;
+
 }
 
 .list-menu ul {
@@ -191,6 +193,16 @@ hr {
 	margin-left: 5px;
 	cursor: pointer;
 }
+
+.preload {
+	/* position: absolute; */
+	display: block;
+	width: 5px;
+	height: 5px;
+	overflow: hidden;
+	left:-1000px;
+}
+
 
 @media (max-width: 414px){
 	.top-navigation .fa {

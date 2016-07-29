@@ -8,6 +8,9 @@ body{
 	background: linear-gradient(to right, #1ACFFF, #0B62FE);
 	position: fixed;
 	width: 100%;
+	top: 0;
+	left:0;
+	z-index: 10;
 }
 
 h1{
@@ -16,7 +19,7 @@ h1{
 	font-weight: 300;
 	color: white;
 	margin-right: 18px;
-}
+}	
 
 .top-navigation .fa-bars {
 	color: white;
@@ -41,6 +44,28 @@ h1{
 	margin-right: -15px;
 	height: 50px;
 }
+
+.list-menu {
+	position: absolute;
+	top: 100%;
+	left: -100%;
+	width: 100%;
+	background-color:gray; 
+}
+
+.list-menu ul {
+	margin:0;
+	padding:0;
+	list-style: none;
+}
+
+.list-menu a {
+	display: block;
+	text-align: center;
+	padding: 1em;
+	font-size: 2em;
+}
+
 
 .form-group {
 	padding-top: 126.219px;
@@ -123,14 +148,29 @@ hr {
 	height: 20px;
 	background-image:url("../images/list-unchecked.png");
 	background-size: contain;
+	vertical-align: -2px;
 }
 
 .is-completed:checked + .check-icon{
 	background-image: url("../images/list-checked.png");
 }
 
+.is-completed:checked + .check-icon + .item-name {
+	text-decoration: line-through;
+}
+
 .is-completed{
 	display: none;
+}
+
+.fa-trash-o 	{
+	color:red;
+	margin-left: 5px;
+	cursor: pointer;
+}
+
+.item-list {
+  display: none;
 }
 
 @media (max-width: 414px){
